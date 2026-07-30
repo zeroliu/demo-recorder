@@ -1,0 +1,25 @@
+{
+  "captions": [
+    {
+      "start": 0.0,
+      "end": 3.0,
+      "text": "Type an unsent draft in the current backend.",
+      "label": "STEP 1",
+      "tone": "neutral"
+    },
+    {
+      "start": 3.0,
+      "end": 6.0,
+      "text": "Switch to a different Agent Mode backend.",
+      "label": "STEP 2",
+      "tone": "neutral"
+    },
+    {
+      "start": 6.0,
+      "end": 9.0,
+      "text": "Confirm whether the draft survives the switch.",
+      "label": "RESULT",
+      "tone": "after"
+    }
+  ]
+}

@@ -1,0 +1,18 @@
+{
+  "captions": [
+    {
+      "start": 0.25,
+      "end": 2.0,
+      "text": "The recorder selected this Obsidian window by ID.",
+      "label": "SMOKE TEST",
+      "tone": "neutral"
+    },
+    {
+      "start": 2.0,
+      "end": 3.75,
+      "text": "Cursor movement and clicks are captured natively.",
+      "label": "CAPTURE",
+      "tone": "after"
+    }
+  ]
+}

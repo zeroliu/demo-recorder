@@ -1,0 +1,26 @@
+name: Release
+
+on:
+  push:
+    tags: ["v*"]
+
+permissions:
+  contents: write
+
+jobs:
+  release:
+    runs-on: macos-15
+    steps:
+      - uses: actions/checkout@v4
+      - run: swift test
+      - run: swift format lint --recursive Sources Tests Package.swift
+      - run: scripts/package-release.sh
+      - name: Publish release
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          gh release create "$GITHUB_REF_NAME" \
+            demo-recorder-macos-universal.tar.gz \
+            demo-recorder-macos-universal.tar.gz.sha256 \
+            --generate-notes \
+            --title "$GITHUB_REF_NAME"
