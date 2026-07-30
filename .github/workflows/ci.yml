@@ -9,7 +9,9 @@ jobs:
   verify:
     runs-on: macos-15
     steps:
-      - uses: actions/checkout@v4
+      - uses: actions/checkout@v6
       - run: swift test
       - run: swift format lint --recursive Sources Tests Package.swift
       - run: swift build -c release
+      - run: zsh -n Skills/screen-recording/scripts/*.sh
+      - run: python3 -m py_compile Skills/screen-recording/scripts/video_pipeline.py

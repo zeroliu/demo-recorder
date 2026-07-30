@@ -11,7 +11,7 @@ jobs:
   release:
     runs-on: macos-15
     steps:
-      - uses: actions/checkout@v4
+      - uses: actions/checkout@v6
       - run: swift test
       - run: swift format lint --recursive Sources Tests Package.swift
       - run: scripts/package-release.sh

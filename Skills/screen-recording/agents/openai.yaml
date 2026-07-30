@@ -1,0 +1,4 @@
+interface:
+  display_name: "Screen Recording"
+  short_description: "Record polished bug and feature walkthroughs"
+  default_prompt: "Use $screen-recording to create and publish a polished walkthrough video."

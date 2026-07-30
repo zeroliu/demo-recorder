@@ -33,6 +33,21 @@ swift build -c release
 
 The CLI is then available at `.build/release/DemoRecorder`.
 
+## Screen-recording skill
+
+`Skills/screen-recording` contains the complete bug-comparison and feature-demo
+workflow. It checks for `demo-recorder`, downloads and verifies the latest
+GitHub release when needed, composes tweened zooms and transitions, generates
+inspection storyboards, compresses the final MP4, uploads approved public
+content to R2, and can optionally prepend the URL to a pull request.
+
+Install one user-level copy for Codex and share it with Claude:
+
+```bash
+cp -R Skills/screen-recording ~/.codex/skills/screen-recording
+ln -s ~/.codex/skills/screen-recording ~/.claude/skills/screen-recording
+```
+
 ## Recording SOP
 
 ### 1. Select the exact window
